@@ -1,0 +1,6 @@
+{
+  "name": "WeldTrack Pro - Welding Quality & Qualification Management",
+  "description": "Industrial welding management module tracking Job Work Cards, AWS Welding Procedure Specifications (WPS), and Welder Performance Qualification Records (WPQR) with 6-month and annual prolongation monitoring.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

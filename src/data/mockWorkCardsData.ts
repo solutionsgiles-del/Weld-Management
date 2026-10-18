@@ -1,0 +1,101 @@
+import { WorkCardSpecSheet } from '../types';
+
+export const INITIAL_WORK_CARDS: WorkCardSpecSheet[] = [
+  {
+    id: 'WC-CARD-001',
+    workCardNumber: 'WC-2026-0881',
+    jobTitle: 'Heavy Transfer Girder Flange Splices - Frame Grid 4-D',
+    clientProject: 'Skyline Metro Tower Terminal Expansion',
+    drawingNumber: 'DWG-STR-104-REV-E',
+    material: 'ASTM A572 Gr. 50 Structural Carbon Steel',
+    process: 'FCAW',
+    jointType: 'Butt Joint (Single-V Groove)',
+    assignedWpsIds: ['WPS-CS-FCAW-03', 'WPS-CS-SMAW-01'], // Available WPS on this spec sheet
+    assignedWelders: [
+      {
+        welderId: 'WLD-001',
+        welderName: 'Marcus Vance',
+        stampNumber: 'W-104',
+        chosenWpsId: 'WPS-CS-FCAW-03', // Vance is qualified for FCAW and SMAW
+        jointReference: 'Joint #GL-4D-Top-Flange-01',
+        assignedPasses: 'Root, Hot Pass & Fill Passes 1-4',
+        signOffDate: '2026-10-16',
+        inspectionPassed: true,
+      },
+      {
+        welderId: 'WLD-003',
+        welderName: 'David Chen',
+        stampNumber: 'W-312',
+        chosenWpsId: 'WPS-CS-FCAW-03', // Chen is qualified for FCAW
+        jointReference: 'Joint #GL-4D-Btm-Flange-02',
+        assignedPasses: 'Fill Passes 5-8 & Final Cap',
+        signOffDate: '2026-10-17',
+        inspectionPassed: true,
+      },
+    ],
+    status: 'in_progress',
+    createdAt: '2026-10-14',
+    targetCompletionDate: '2026-10-24',
+    qaSupervisor: 'Robert Davis, CWI',
+    qaSupervisorStamp: 'CWI-14092',
+    notes: 'Preheat minimum 75°C required with Tempilstik verification prior to tacking and root pass.',
+  },
+  {
+    id: 'WC-CARD-002',
+    workCardNumber: 'WC-2026-0894',
+    jobTitle: 'Cryogenic Tank Stainless Inlet Piping Spool - ISO-SS-12',
+    clientProject: 'BioPharma Pure Cleanroom Facility',
+    drawingNumber: 'DWG-PIP-SS-304-09',
+    material: 'AISI 316L Austenitic Stainless Steel',
+    process: 'GTAW',
+    jointType: 'Butt Joint (Single-V Groove)',
+    assignedWpsIds: ['WPS-SS-GTAW-04'],
+    assignedWelders: [
+      {
+        welderId: 'WLD-004',
+        welderName: 'Sipho Khumalo',
+        stampNumber: 'W-415',
+        chosenWpsId: 'WPS-SS-GTAW-04', // Sipho is qualified for GTAW P8
+        jointReference: 'Weld Seam #SS-01 (6" Sch 40)',
+        assignedPasses: 'Root pass (Argon purge verified) + Cap',
+        signOffDate: '2026-10-16',
+        inspectionPassed: true,
+      },
+    ],
+    status: 'active',
+    createdAt: '2026-10-15',
+    targetCompletionDate: '2026-10-28',
+    qaSupervisor: 'Markus Becker, Level III',
+    qaSupervisorStamp: 'QC-NDT-882',
+    notes: 'Oxygen purge sensor must read < 50 ppm before initiating arc. Dedicated stainless wire brush only.',
+  },
+  {
+    id: 'WC-CARD-003',
+    workCardNumber: 'WC-2026-0902',
+    jobTitle: 'Perimeter Canopy Aluminum Architectural Trusses',
+    clientProject: 'Harbor Gateway Transit Hub',
+    drawingNumber: 'DWG-AL-TRUSS-400',
+    material: 'Aluminum 6061-T6 Extrusion & Gusset',
+    process: 'GMAW',
+    jointType: 'T-Joint (Fillet Weld)',
+    assignedWpsIds: ['WPS-AL-GMAW-05'],
+    assignedWelders: [
+      {
+        welderId: 'WLD-002',
+        welderName: 'Elena Rostova',
+        stampNumber: 'W-209',
+        chosenWpsId: 'WPS-AL-GMAW-05', // Rostova is qualified for Aluminum GMAW
+        jointReference: 'Truss Node Gusset #N-14',
+        assignedPasses: 'Double Fillet 8mm Leg size',
+        signOffDate: '',
+        inspectionPassed: false,
+      },
+    ],
+    status: 'draft',
+    createdAt: '2026-10-17',
+    targetCompletionDate: '2026-11-02',
+    qaSupervisor: 'Karen Larson, QC Manager',
+    qaSupervisorStamp: 'QC-DIR-04',
+    notes: 'Interpass temperature must not exceed 120°C to preserve T6 temper mechanical yield strength.',
+  },
+];
